@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AngularAgain';
+  title:string = 'First new component';
+  introduction: boolean = false;
+  directives: boolean = false;
+  applications2: boolean = false;
 }

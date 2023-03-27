@@ -1,0 +1,76 @@
+<p [ngStyle]="{
+   textAlign: 'center'
+}">learn-directives works!</p>
+
+<div [ngStyle]="{
+      padding: '10px',
+      width: '500px', 
+      minHeight: '80px',
+      borderRadius: '20px',
+      boxShadow: '0px 0px 9px 0px rgb(255, 153, 0)',
+      margin: '30px',
+      transition: 'all 2s',
+      background: backgroundToggle ? 'rgb(0, 0, 0)':  'rgb(30, 30, 30)'
+   }">
+   <button (click)="backgroundToggle = !backgroundToggle">Change Background</button>
+   <p>Изменяем фон спомощью директивы стиля</p>
+</div>
+
+<div  [ngClass]="{
+      black: classToggle2,
+      gray: !classToggle2
+   }">
+   <button (click)="classToggle2 = !classToggle2">Change Background</button>
+   <p>Изменяем фон спомощью директивы класса</p>
+</div>
+
+<div>
+   <button (click)="toggle = !toggle">Кнопка</button>
+   <p *ngIf="toggle">структурные директивы. СДЕЛАННО СПОМОЩЬЮ ngIf параграф появится если toggle (переменая в классе) присвоено true</p>
+   <p *ngIf="!toggle" class="gray">структурные директивы.СДЕЛАННО СПОМОЩЬЮ ngIf параграф появится если toggle (переменая в классе) присвоено фолс</p>
+</div>
+
+<div>
+   <button (click)="toggle2 = !toggle2">Кнопка</button>
+   <p *ngIf="toggle2; else otherP">структурные директивы. СДЕЛАННО СПОМОЩЬЮ ngIf и else параграф появится если toggle2 (переменая в классе) присвоено true</p>
+   <ng-template  #otherP>
+      <p  class="gray">структурные директивы. СДЕЛАННО СПОМОЩЬЮ ngIf и else параграф появится если toggle2 (переменая в классе) присвоено
+         фолс</p>
+   </ng-template>
+</div>
+
+<div>
+   <button (click)="toggle3 = !toggle3">кнопка</button>
+   <div [ngSwitch]="toggle3">
+      <p *ngSwitchCase="true">изменение структыры html шаблона при помощи ngSwitch первый парграф</p>
+      <p *ngSwitchCase="false" class="gray">изменение структыры html шаблона при помощи ngSwitch второй параграф</p>
+      <p *ngSwitchDefault>output2</p>
+   </div>
+</div>
+
+
+<div>
+   <ul>
+      <li *ngFor="let x of arr; let id = index">
+         <p style="margin: 15px; text-transform: uppercase; border: 1px rgb(41, 37, 37) dashed;">
+            <span style="margin: 0px 20px;">{{id}}</span><strong>{{x}}</strong>
+         </p>
+      </li>
+   </ul>
+</div>
+
+<div *ngFor="let post of posts; let id = index">
+   <p style=" margin: 15px;"><span style="margin: 5px;">{{id}}</span>{{post.title}}</p>
+   <p style=" margin: 15px;">{{post.text}}</p>
+   <p style=" margin: 15px;">{{post.author}}</p>
+   <ul>
+      <li *ngFor="let com of post.comments; let id2 = index" style="margin: 15px; text-align: right;">
+         <span style=" margin: 5px;">{{id2}}</span> <strong>{{com.name}}</strong> <span
+            style=" margin: 5px;">{{com.text}}</span>
+      </li>
+   </ul>
+</div>
+
+<div>
+   <p>{{now | date}}</p>
+</div>

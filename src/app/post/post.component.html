@@ -1,0 +1,11 @@
+<h2 class="post__componet-title">{{title}}</h2>
+   <!--в классе appComponent мы указали переменную с именем img и по этому можем использовать ее в бандинге-->
+   <!--rКаласический вариант - не бандиг? здесь мы прописаваем самостоятельно функцию в клсассе <img src="{{img}}" alt="angular"> -->
+   <!--Бандинг-->
+   <img [src]="img" alt="angular/react">
+   <input type="text" (input)="oninput1($event)">
+   <p>{{inputValue}}</p>
+   <input type="text" placeholder="input2" [value]="otherTitle" (input)="oninput2($event)">
+   <p>{{inputValue2}}</p>
+   <input type="text" [(ngModel)]="valueTitle">
+   <p>{{valueTitle}}</p>
