@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Post2 } from './applications-number2/applications-number2.component';
 
 @Component({
   selector: 'app-root',
