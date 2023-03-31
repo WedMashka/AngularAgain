@@ -15,7 +15,8 @@ import { Dir1Directive } from './test-directives/dir1.directive';
 import { Dir2Directive } from './test-directives/dir2.directive';
 import { Dir3Directive } from './test-directives/dir3.directive';
 import { Dir4Directive } from './test-directives/dir4.directive';
-import { CreatePipePipe } from './pipes/create-pipe.pipe'; 
+import { CreatePipePipe } from './pipes/create-pipe.pipe';
+import { PipeFilterPipe } from './pipes/pipe-filter.pipe'; 
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CreatePipePipe } from './pipes/create-pipe.pipe';
     Dir2Directive,
     Dir3Directive,
     Dir4Directive,
-    CreatePipePipe
+    CreatePipePipe,
+    PipeFilterPipe
   ],
   imports: [
     BrowserModule,

@@ -39,4 +39,11 @@
    <p>{{9 | createPipe:3}} created and attached to varible pipe createPipe <strong>pipe createPipe:3</strong> прайп возводит в степень переменную, поумолчанию в квадрат, или в степень которую указал</p>
    <p>{{3 | createPipe:2}} created and attached to varible pipe createPipe <strong>pipe createPipe:2</strong> прайп возводит в степень переменную, поумолчанию в квадрат или в степень которую применил</p>
 </div>
+<div>
+   <input type="text" [(ngModel)]="search">
+   <div *ngFor="let post of posts5 |pipeFilter:search">
+      <p>{{post.title}}</p>
+      <p>{{post.text}}</p>
+   </div>
+</div>
 
