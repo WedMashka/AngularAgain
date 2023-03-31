@@ -1,0 +1,42 @@
+<h2>Pipes works!!!</h2>
+<div>
+   <p>{{e}} <span>наша пересенная math.E</span> </p> 
+   <p>{{e | number}} <span>наша пересенная math.E послеприменения встроенного pipe number</span> </p> 
+   <p>{{e | number:'1.1-4'}} <span> наша пересенная math.E послеприменения встроенного pipe number и добавления значения в него при помощи ":"</span></p>
+   <p>{{e | number:'3.1-1'}} <span> наша пересенная math.E послеприменения встроенного pipe number и добавления значения в него при помощи ":"</span></p>
+            <p>{{e | number:'3.0-0'}} <span> наша пересенная math.E послеприменения встроенного pipe number и добавления значения в него при помощи ":"</span></p>
+</div>
+<div>
+   <p>{{str}}</p>
+   <p>{{str | uppercase}} <span>После пименения <strong>pipe uppercase</strong> </span></p>
+   <p>{{str | uppercase | lowercase}} <span>После пименения <strong>pipe uppercase</strong>  а потом <strong>pipe lowercase</strong> . T.e. мы можем применять пайпы последовательно в одной переменной</span></p>
+   <p>{{str | titlecase}} <span>После пименения <strong>pipe titlecase</strong> </span></p>
+   <p>{{str2}}</p>
+   <p>{{str2 |  slice:1:5}} <span>После пименения <strong>pipe slice</strong> кторый работает также как и в массивах в  js</span></p>
+   <p>{{str2 | slice:0:-2}} <span>После пименения <strong>pipe slice</strong> кторый работает также как и в массивах в js</span></p>
+</div>
+<div>
+   <p>{{date}} <span>The variable date</span></p>
+   <p>{{date | date}} <span>The variable date with <strong>pipe date</strong> </span></p>
+   <p>{{date | date:'shortTime'}} <span>The variable date with <strong>pipe date date:'shortTime'</strong> </span></p>
+   <p>{{date | date:'hh:mm'}} <span>The variable date with <strong>pipe  date:'hh:mm'</strong> </span></p>
+      <p>{{date | date:'HH:mm'}} <span>The variable date with <strong>pipe  date:'HH:mm'</strong> </span></p>
+</div>
+<div>
+   <p>{{numberFloat | currency}} <span>number PI with pipe <strong>currency</strong></span></p>
+   <p>{{numberFloat | percent}}<span>number PI with pipe <strong>percent</strong></span></p>
+   <p>{{numberFloat | number:'1.1-5'}}<span>number PI with pipe <strong>number:'1.1-5'</strong></span></p>
+   <p>{{numberFloat}}</p>
+   <p>{{numberFloat}}</p>
+</div>
+<div>
+   <p>{{userJonah}} <span>variable type Object without pipe</span></p>
+   <p>{{userJonah | json}} <span> variable type Odject with pipe<strong> json</strong></span></p>
+   <pre>{{userJonah | json}} <span> variable type Odject with pipe<strong> json</strong> and tag &lt;pre&gt;</span></pre>
+</div>
+<div>
+   <p>{{9 | createPipe}} <span> created and attached to varible pipe createPipe <strong>pipe createPipe</strong> прайп возводит в степень переменную, по умолчанию в квадрат</span></p>
+   <p>{{9 | createPipe:3}} created and attached to varible pipe createPipe <strong>pipe createPipe:3</strong> прайп возводит в степень переменную, поумолчанию в квадрат, или в степень которую указал</p>
+   <p>{{3 | createPipe:2}} created and attached to varible pipe createPipe <strong>pipe createPipe:2</strong> прайп возводит в степень переменную, поумолчанию в квадрат или в степень которую применил</p>
+</div>
+

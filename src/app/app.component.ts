@@ -11,4 +11,6 @@ export class AppComponent {
   introduction: boolean = false;
   directives: boolean = false;
   applications2: boolean = false;
+  appPipes: boolean = false;
+  appDirectives: boolean = false;
 }

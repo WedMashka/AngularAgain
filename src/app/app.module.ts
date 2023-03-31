@@ -9,6 +9,13 @@ import { LearnDirectivesComponent } from './learn-directives/learn-directives.co
 import { ApplicationsNumber2Component } from './applications-number2/applications-number2.component';
 import { PostFormComponent } from './applications-number2/post-form/post-form.component';
 import { Post2Component } from './applications-number2/post2/post2.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { TestDirectivesComponent } from './test-directives/test-directives.component';
+import { Dir1Directive } from './test-directives/dir1.directive';
+import { Dir2Directive } from './test-directives/dir2.directive';
+import { Dir3Directive } from './test-directives/dir3.directive';
+import { Dir4Directive } from './test-directives/dir4.directive';
+import { CreatePipePipe } from './pipes/create-pipe.pipe'; 
 
 @NgModule({
   declarations: [
@@ -17,7 +24,14 @@ import { Post2Component } from './applications-number2/post2/post2.component';
     LearnDirectivesComponent,
     ApplicationsNumber2Component,
     PostFormComponent,
-    Post2Component
+    Post2Component,
+    PipesComponent,
+    TestDirectivesComponent,
+    Dir1Directive,
+    Dir2Directive,
+    Dir3Directive,
+    Dir4Directive,
+    CreatePipePipe
   ],
   imports: [
     BrowserModule,

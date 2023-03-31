@@ -1,10 +1,20 @@
 <div class="wrapper">
   <div class="content">
-    <button (click)="introduction = !introduction">введение и бандинг</button>
-    <app-post *ngIf="introduction"></app-post>
-    <button (click) ="directives =!directives">директивы ngFor/ ngIf/ ngSwitch/ pipe</button>
-    <app-learn-directives *ngIf="directives"></app-learn-directives>
-    <button (click)="applications2 = !applications2">пиложение номер 2</button>
-    <app-applications-number2 *ngIf="applications2"></app-applications-number2>
+      <header class="header">
+      <button (click)="introduction = !introduction">введение и бандинг</button>
+      <button (click)="directives =!directives">директивы ngFor/ ngIf/ ngSwitch/ pipe</button>
+      <button (click)="applications2 = !applications2">пиложение номер 2</button>
+      <button (click)="appDirectives = !appDirectives">Test crete directives</button>
+      <button (click)="appPipes = !appPipes">Learn pipes</button>
+    </header>
+    <div class="body">
+      <app-post *ngIf="introduction"></app-post>
+      <app-learn-directives *ngIf="directives"></app-learn-directives>
+      <app-applications-number2 *ngIf="applications2"></app-applications-number2>
+      <app-pipes *ngIf="appPipes"></app-pipes>
+      <app-test-directives *ngIf="appDirectives"></app-test-directives>
+    </div>
   </div>
 </div> 
+
+
